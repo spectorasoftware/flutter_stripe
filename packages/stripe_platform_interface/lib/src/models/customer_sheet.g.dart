@@ -6,15 +6,16 @@ part of 'customer_sheet.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_CustomerSheetInitParams _$CustomerSheetInitParamsFromJson(
+_$CustomerSheetInitParamsImpl _$$CustomerSheetInitParamsImplFromJson(
   Map<String, dynamic> json,
-) => _CustomerSheetInitParams(
+) => _$CustomerSheetInitParamsImpl(
   style: $enumDecodeNullable(_$ThemeModeEnumMap, json['style']),
-  appearance: json['appearance'] == null
-      ? null
-      : PaymentSheetAppearance.fromJson(
-          json['appearance'] as Map<String, dynamic>,
-        ),
+  appearance:
+      json['appearance'] == null
+          ? null
+          : PaymentSheetAppearance.fromJson(
+            json['appearance'] as Map<String, dynamic>,
+          ),
   setupIntentClientSecret: json['setupIntentClientSecret'] as String?,
   customerId: json['customerId'] as String,
   customerEphemeralKeySecret: json['customerEphemeralKeySecret'] as String,
@@ -22,34 +23,38 @@ _CustomerSheetInitParams _$CustomerSheetInitParamsFromJson(
   allowsRemovalOfLastSavedPaymentMethod:
       json['allowsRemovalOfLastSavedPaymentMethod'] as bool?,
   headerTextForSelectionScreen: json['headerTextForSelectionScreen'] as String?,
-  defaultBillingDetails: json['defaultBillingDetails'] == null
-      ? null
-      : BillingDetails.fromJson(
-          json['defaultBillingDetails'] as Map<String, dynamic>,
-        ),
+  defaultBillingDetails:
+      json['defaultBillingDetails'] == null
+          ? null
+          : BillingDetails.fromJson(
+            json['defaultBillingDetails'] as Map<String, dynamic>,
+          ),
   billingDetailsCollectionConfiguration:
       json['billingDetailsCollectionConfiguration'] == null
-      ? null
-      : BillingDetailsCollectionConfiguration.fromJson(
-          json['billingDetailsCollectionConfiguration'] as Map<String, dynamic>,
-        ),
+          ? null
+          : BillingDetailsCollectionConfiguration.fromJson(
+            json['billingDetailsCollectionConfiguration']
+                as Map<String, dynamic>,
+          ),
   returnURL: json['returnURL'] as String?,
   removeSavedPaymentMethodMessage:
       json['removeSavedPaymentMethodMessage'] as String?,
   applePayEnabled: json['applePayEnabled'] as bool? ?? true,
   googlePayEnabled: json['googlePayEnabled'] as bool? ?? true,
-  preferredNetworks: (json['preferredNetworks'] as List<dynamic>?)
-      ?.map((e) => $enumDecode(_$CardBrandEnumMap, e))
-      .toList(),
-  cardBrandAcceptance: json['cardBrandAcceptance'] == null
-      ? null
-      : CardBrandAcceptance.fromJson(
-          json['cardBrandAcceptance'] as Map<String, dynamic>,
-        ),
+  preferredNetworks:
+      (json['preferredNetworks'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$CardBrandEnumMap, e))
+          .toList(),
+  cardBrandAcceptance:
+      json['cardBrandAcceptance'] == null
+          ? null
+          : CardBrandAcceptance.fromJson(
+            json['cardBrandAcceptance'] as Map<String, dynamic>,
+          ),
 );
 
-Map<String, dynamic> _$CustomerSheetInitParamsToJson(
-  _CustomerSheetInitParams instance,
+Map<String, dynamic> _$$CustomerSheetInitParamsImplToJson(
+  _$CustomerSheetInitParamsImpl instance,
 ) => <String, dynamic>{
   'style': UserInterfaceStyleKey.toJson(instance.style),
   'appearance': instance.appearance?.toJson(),
@@ -61,9 +66,8 @@ Map<String, dynamic> _$CustomerSheetInitParamsToJson(
       instance.allowsRemovalOfLastSavedPaymentMethod,
   'headerTextForSelectionScreen': instance.headerTextForSelectionScreen,
   'defaultBillingDetails': instance.defaultBillingDetails?.toJson(),
-  'billingDetailsCollectionConfiguration': instance
-      .billingDetailsCollectionConfiguration
-      ?.toJson(),
+  'billingDetailsCollectionConfiguration':
+      instance.billingDetailsCollectionConfiguration?.toJson(),
   'returnURL': instance.returnURL,
   'removeSavedPaymentMethodMessage': instance.removeSavedPaymentMethodMessage,
   'applePayEnabled': instance.applePayEnabled,
@@ -90,9 +94,9 @@ const _$CardBrandEnumMap = {
   CardBrand.Unknown: 'Unknown',
 };
 
-_CustomerSheetPresentParams _$CustomerSheetPresentParamsFromJson(
+_$CustomerSheetPresentParamsImpl _$$CustomerSheetPresentParamsImplFromJson(
   Map<String, dynamic> json,
-) => _CustomerSheetPresentParams(
+) => _$CustomerSheetPresentParamsImpl(
   presentationStyle: $enumDecodeNullable(
     _$CustomerSheetPresentationStyleEnumMap,
     json['presentationStyle'],
@@ -104,8 +108,8 @@ _CustomerSheetPresentParams _$CustomerSheetPresentParamsFromJson(
   timeout: (json['timeout'] as num?)?.toInt(),
 );
 
-Map<String, dynamic> _$CustomerSheetPresentParamsToJson(
-  _CustomerSheetPresentParams instance,
+Map<String, dynamic> _$$CustomerSheetPresentParamsImplToJson(
+  _$CustomerSheetPresentParamsImpl instance,
 ) => <String, dynamic>{
   'presentationStyle':
       _$CustomerSheetPresentationStyleEnumMap[instance.presentationStyle],
@@ -130,24 +134,31 @@ const _$CustomerSheetAnimationStyleEnumMap = {
   CustomerSheetAnimationStyle.dissolve: 'dissolve',
 };
 
-_CustomerSheetResult _$CustomerSheetResultFromJson(
+_$CustomerSheetResultImpl _$$CustomerSheetResultImplFromJson(
   Map<String, dynamic> json,
-) => _CustomerSheetResult(
-  paymentOption: json['paymentOption'] == null
-      ? null
-      : PaymentSheetPaymentOption.fromJson(
-          json['paymentOption'] as Map<String, dynamic>,
-        ),
-  paymentMethod: json['paymentMethod'] == null
-      ? null
-      : PaymentMethod.fromJson(json['paymentMethod'] as Map<String, dynamic>),
-  error: json['error'] == null
-      ? null
-      : StripeError<dynamic>.fromJson(json['error'] as Map<String, dynamic>),
+) => _$CustomerSheetResultImpl(
+  paymentOption:
+      json['paymentOption'] == null
+          ? null
+          : PaymentSheetPaymentOption.fromJson(
+            json['paymentOption'] as Map<String, dynamic>,
+          ),
+  paymentMethod:
+      json['paymentMethod'] == null
+          ? null
+          : PaymentMethod.fromJson(
+            json['paymentMethod'] as Map<String, dynamic>,
+          ),
+  error:
+      json['error'] == null
+          ? null
+          : StripeError<dynamic>.fromJson(
+            json['error'] as Map<String, dynamic>,
+          ),
 );
 
-Map<String, dynamic> _$CustomerSheetResultToJson(
-  _CustomerSheetResult instance,
+Map<String, dynamic> _$$CustomerSheetResultImplToJson(
+  _$CustomerSheetResultImpl instance,
 ) => <String, dynamic>{
   'paymentOption': instance.paymentOption?.toJson(),
   'paymentMethod': instance.paymentMethod?.toJson(),

@@ -6,30 +6,39 @@ part of 'setup_intent.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SetupIntent _$SetupIntentFromJson(Map<String, dynamic> json) => _SetupIntent(
-  id: json['id'] as String,
-  status: json['status'] as String,
-  livemode: json['livemode'] as bool,
-  clientSecret: json['clientSecret'] as String,
-  paymentMethodId: json['paymentMethodId'] as String,
-  usage: json['usage'] as String,
-  paymentMethodTypes: (json['paymentMethodTypes'] as List<dynamic>)
-      .map((e) => $enumDecode(_$PaymentMethodTypeEnumMap, e))
-      .toList(),
-  description: json['description'] as String?,
-  created: json['created'] as String?,
-  lastSetupError: json['lastSetupError'] == null
-      ? null
-      : LastSetupError.fromJson(json['lastSetupError'] as Map<String, dynamic>),
-  nextAction: json['nextAction'] == null
-      ? null
-      : NextAction.fromJson(json['nextAction'] as Map<String, dynamic>),
-  mandateData: json['mandateData'] == null
-      ? null
-      : MandateData.fromJson(json['mandateData'] as Map<String, dynamic>),
-);
+_$SetupIntentImpl _$$SetupIntentImplFromJson(Map<String, dynamic> json) =>
+    _$SetupIntentImpl(
+      id: json['id'] as String,
+      status: json['status'] as String,
+      livemode: json['livemode'] as bool,
+      clientSecret: json['clientSecret'] as String,
+      paymentMethodId: json['paymentMethodId'] as String,
+      usage: json['usage'] as String,
+      paymentMethodTypes:
+          (json['paymentMethodTypes'] as List<dynamic>)
+              .map((e) => $enumDecode(_$PaymentMethodTypeEnumMap, e))
+              .toList(),
+      description: json['description'] as String?,
+      created: json['created'] as String?,
+      lastSetupError:
+          json['lastSetupError'] == null
+              ? null
+              : LastSetupError.fromJson(
+                json['lastSetupError'] as Map<String, dynamic>,
+              ),
+      nextAction:
+          json['nextAction'] == null
+              ? null
+              : NextAction.fromJson(json['nextAction'] as Map<String, dynamic>),
+      mandateData:
+          json['mandateData'] == null
+              ? null
+              : MandateData.fromJson(
+                json['mandateData'] as Map<String, dynamic>,
+              ),
+    );
 
-Map<String, dynamic> _$SetupIntentToJson(_SetupIntent instance) =>
+Map<String, dynamic> _$$SetupIntentImplToJson(_$SetupIntentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'status': instance.status,
@@ -37,9 +46,10 @@ Map<String, dynamic> _$SetupIntentToJson(_SetupIntent instance) =>
       'clientSecret': instance.clientSecret,
       'paymentMethodId': instance.paymentMethodId,
       'usage': instance.usage,
-      'paymentMethodTypes': instance.paymentMethodTypes
-          .map((e) => _$PaymentMethodTypeEnumMap[e]!)
-          .toList(),
+      'paymentMethodTypes':
+          instance.paymentMethodTypes
+              .map((e) => _$PaymentMethodTypeEnumMap[e]!)
+              .toList(),
       'description': instance.description,
       'created': instance.created,
       'lastSetupError': instance.lastSetupError?.toJson(),
@@ -72,11 +82,12 @@ const _$PaymentMethodTypeEnumMap = {
   PaymentMethodType.Unknown: 'Unknown',
 };
 
-_LastSetupError _$LastSetupErrorFromJson(Map<String, dynamic> json) =>
-    _LastSetupError(
+_$LastSetupErrorImpl _$$LastSetupErrorImplFromJson(Map<String, dynamic> json) =>
+    _$LastSetupErrorImpl(
       code: json['code'] as String,
       message: json['message'] as String,
     );
 
-Map<String, dynamic> _$LastSetupErrorToJson(_LastSetupError instance) =>
-    <String, dynamic>{'code': instance.code, 'message': instance.message};
+Map<String, dynamic> _$$LastSetupErrorImplToJson(
+  _$LastSetupErrorImpl instance,
+) => <String, dynamic>{'code': instance.code, 'message': instance.message};

@@ -6,17 +6,18 @@ part of 'intent_creation_callback_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IntentCreationCallbackParams _$IntentCreationCallbackParamsFromJson(
+_$IntentCreationCallbackParamsImpl _$$IntentCreationCallbackParamsImplFromJson(
   Map<String, dynamic> json,
-) => _IntentCreationCallbackParams(
+) => _$IntentCreationCallbackParamsImpl(
   clientSecret: json['clientSecret'] as String?,
-  error: json['error'] == null
-      ? null
-      : StripeException.fromJson(json['error'] as Map<String, dynamic>),
+  error:
+      json['error'] == null
+          ? null
+          : StripeException.fromJson(json['error'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$IntentCreationCallbackParamsToJson(
-  _IntentCreationCallbackParams instance,
+Map<String, dynamic> _$$IntentCreationCallbackParamsImplToJson(
+  _$IntentCreationCallbackParamsImpl instance,
 ) => <String, dynamic>{
   'clientSecret': instance.clientSecret,
   'error': instance.error?.toJson(),

@@ -6,52 +6,59 @@ part of 'three_d_secure.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ThreeDSecureConfigurationParams _$ThreeDSecureConfigurationParamsFromJson(
-  Map<String, dynamic> json,
-) => _ThreeDSecureConfigurationParams(
-  navigationBar: ThreeDSecureNavigationBarThemeData.fromJson(
-    json['navigationBar'] as Map<String, dynamic>,
-  ),
-  timeout: (json['timeout'] as num?)?.toInt(),
-  label: json['label'] == null
-      ? null
-      : ThreeDSecureLabelThemeData.fromJson(
-          json['label'] as Map<String, dynamic>,
-        ),
-  textField: json['textField'] == null
-      ? null
-      : ThreeDSecureTextFieldThemeData.fromJson(
-          json['textField'] as Map<String, dynamic>,
-        ),
-  submitButton: json['submitButton'] == null
-      ? null
-      : ThreeDSecureButtonThemeData.fromJson(
-          json['submitButton'] as Map<String, dynamic>,
-        ),
-  cancelButton: json['cancelButton'] == null
-      ? null
-      : ThreeDSecureButtonThemeData.fromJson(
-          json['cancelButton'] as Map<String, dynamic>,
-        ),
-  nextButton: json['nextButton'] == null
-      ? null
-      : ThreeDSecureButtonThemeData.fromJson(
-          json['nextButton'] as Map<String, dynamic>,
-        ),
-  continueButton: json['continueButton'] == null
-      ? null
-      : ThreeDSecureButtonThemeData.fromJson(
-          json['continueButton'] as Map<String, dynamic>,
-        ),
-  resendButton: json['resendButton'] == null
-      ? null
-      : ThreeDSecureButtonThemeData.fromJson(
-          json['resendButton'] as Map<String, dynamic>,
-        ),
-);
+_$ThreeDSecureConfigurationParamsImpl
+_$$ThreeDSecureConfigurationParamsImplFromJson(Map<String, dynamic> json) =>
+    _$ThreeDSecureConfigurationParamsImpl(
+      navigationBar: ThreeDSecureNavigationBarThemeData.fromJson(
+        json['navigationBar'] as Map<String, dynamic>,
+      ),
+      timeout: (json['timeout'] as num?)?.toInt(),
+      label:
+          json['label'] == null
+              ? null
+              : ThreeDSecureLabelThemeData.fromJson(
+                json['label'] as Map<String, dynamic>,
+              ),
+      textField:
+          json['textField'] == null
+              ? null
+              : ThreeDSecureTextFieldThemeData.fromJson(
+                json['textField'] as Map<String, dynamic>,
+              ),
+      submitButton:
+          json['submitButton'] == null
+              ? null
+              : ThreeDSecureButtonThemeData.fromJson(
+                json['submitButton'] as Map<String, dynamic>,
+              ),
+      cancelButton:
+          json['cancelButton'] == null
+              ? null
+              : ThreeDSecureButtonThemeData.fromJson(
+                json['cancelButton'] as Map<String, dynamic>,
+              ),
+      nextButton:
+          json['nextButton'] == null
+              ? null
+              : ThreeDSecureButtonThemeData.fromJson(
+                json['nextButton'] as Map<String, dynamic>,
+              ),
+      continueButton:
+          json['continueButton'] == null
+              ? null
+              : ThreeDSecureButtonThemeData.fromJson(
+                json['continueButton'] as Map<String, dynamic>,
+              ),
+      resendButton:
+          json['resendButton'] == null
+              ? null
+              : ThreeDSecureButtonThemeData.fromJson(
+                json['resendButton'] as Map<String, dynamic>,
+              ),
+    );
 
-Map<String, dynamic> _$ThreeDSecureConfigurationParamsToJson(
-  _ThreeDSecureConfigurationParams instance,
+Map<String, dynamic> _$$ThreeDSecureConfigurationParamsImplToJson(
+  _$ThreeDSecureConfigurationParamsImpl instance,
 ) => <String, dynamic>{
   'navigationBar': instance.navigationBar.toJson(),
   'timeout': instance.timeout,
@@ -64,9 +71,9 @@ Map<String, dynamic> _$ThreeDSecureConfigurationParamsToJson(
   'resendButton': instance.resendButton?.toJson(),
 };
 
-_ThreeDSecureNavigationBarThemeData
-_$ThreeDSecureNavigationBarThemeDataFromJson(Map<String, dynamic> json) =>
-    _ThreeDSecureNavigationBarThemeData(
+_$ThreeDSecureNavigationBarThemeDataImpl
+_$$ThreeDSecureNavigationBarThemeDataImplFromJson(Map<String, dynamic> json) =>
+    _$ThreeDSecureNavigationBarThemeDataImpl(
       headerText: json['headerText'] as String?,
       buttonText: json['buttonText'] as String?,
       textColor: json['textColor'] as String?,
@@ -75,8 +82,8 @@ _$ThreeDSecureNavigationBarThemeDataFromJson(Map<String, dynamic> json) =>
       textFontSize: (json['textFontSize'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$ThreeDSecureNavigationBarThemeDataToJson(
-  _ThreeDSecureNavigationBarThemeData instance,
+Map<String, dynamic> _$$ThreeDSecureNavigationBarThemeDataImplToJson(
+  _$ThreeDSecureNavigationBarThemeDataImpl instance,
 ) => <String, dynamic>{
   'headerText': instance.headerText,
   'buttonText': instance.buttonText,
@@ -86,17 +93,17 @@ Map<String, dynamic> _$ThreeDSecureNavigationBarThemeDataToJson(
   'textFontSize': instance.textFontSize,
 };
 
-_ThreeDSecureLabelThemeData _$ThreeDSecureLabelThemeDataFromJson(
+_$ThreeDSecureLabelThemeDataImpl _$$ThreeDSecureLabelThemeDataImplFromJson(
   Map<String, dynamic> json,
-) => _ThreeDSecureLabelThemeData(
+) => _$ThreeDSecureLabelThemeDataImpl(
   headingTextColor: json['headingTextColor'] as String?,
   textColor: json['textColor'] as String?,
   textFontSize: (json['textFontSize'] as num?)?.toDouble(),
   headingFontSize: (json['headingFontSize'] as num?)?.toDouble(),
 );
 
-Map<String, dynamic> _$ThreeDSecureLabelThemeDataToJson(
-  _ThreeDSecureLabelThemeData instance,
+Map<String, dynamic> _$$ThreeDSecureLabelThemeDataImplToJson(
+  _$ThreeDSecureLabelThemeDataImpl instance,
 ) => <String, dynamic>{
   'headingTextColor': instance.headingTextColor,
   'textColor': instance.textColor,
@@ -104,18 +111,18 @@ Map<String, dynamic> _$ThreeDSecureLabelThemeDataToJson(
   'headingFontSize': instance.headingFontSize,
 };
 
-_ThreeDSecureTextFieldThemeData _$ThreeDSecureTextFieldThemeDataFromJson(
-  Map<String, dynamic> json,
-) => _ThreeDSecureTextFieldThemeData(
-  borderColor: json['borderColor'] as String?,
-  borderWidth: (json['borderWidth'] as num?)?.toDouble(),
-  cornerRadius: (json['cornerRadius'] as num?)?.toDouble(),
-  textColor: json['textColor'] as String?,
-  textFontSize: (json['textFontSize'] as num?)?.toDouble(),
-);
+_$ThreeDSecureTextFieldThemeDataImpl
+_$$ThreeDSecureTextFieldThemeDataImplFromJson(Map<String, dynamic> json) =>
+    _$ThreeDSecureTextFieldThemeDataImpl(
+      borderColor: json['borderColor'] as String?,
+      borderWidth: (json['borderWidth'] as num?)?.toDouble(),
+      cornerRadius: (json['cornerRadius'] as num?)?.toDouble(),
+      textColor: json['textColor'] as String?,
+      textFontSize: (json['textFontSize'] as num?)?.toDouble(),
+    );
 
-Map<String, dynamic> _$ThreeDSecureTextFieldThemeDataToJson(
-  _ThreeDSecureTextFieldThemeData instance,
+Map<String, dynamic> _$$ThreeDSecureTextFieldThemeDataImplToJson(
+  _$ThreeDSecureTextFieldThemeDataImpl instance,
 ) => <String, dynamic>{
   'borderColor': instance.borderColor,
   'borderWidth': instance.borderWidth,
@@ -124,17 +131,17 @@ Map<String, dynamic> _$ThreeDSecureTextFieldThemeDataToJson(
   'textFontSize': instance.textFontSize,
 };
 
-_ThreeDSecureButtonThemeData _$ThreeDSecureButtonThemeDataFromJson(
+_$ThreeDSecureButtonThemeDataImpl _$$ThreeDSecureButtonThemeDataImplFromJson(
   Map<String, dynamic> json,
-) => _ThreeDSecureButtonThemeData(
+) => _$ThreeDSecureButtonThemeDataImpl(
   backgroundColor: json['backgroundColor'] as String?,
   cornerRadius: (json['cornerRadius'] as num?)?.toDouble(),
   textColor: json['textColor'] as String?,
   textFontSize: (json['textFontSize'] as num?)?.toDouble(),
 );
 
-Map<String, dynamic> _$ThreeDSecureButtonThemeDataToJson(
-  _ThreeDSecureButtonThemeData instance,
+Map<String, dynamic> _$$ThreeDSecureButtonThemeDataImplToJson(
+  _$ThreeDSecureButtonThemeDataImpl instance,
 ) => <String, dynamic>{
   'backgroundColor': instance.backgroundColor,
   'cornerRadius': instance.cornerRadius,

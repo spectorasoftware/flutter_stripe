@@ -6,29 +6,31 @@ part of 'push_provisioning.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GooglePayCardToken _$GooglePayCardTokenFromJson(Map<String, dynamic> json) =>
-    _GooglePayCardToken(
-      id: json['id'] as String,
-      fpanLastFour: json['fpanLastFour'] as String,
-      dpanLastFour: json['dpanLastFour'] as String,
-      network: (json['network'] as num).toInt(),
-      serviceProvider: (json['serviceProvider'] as num).toInt(),
-      issuer: json['issuer'] as String,
-      status: $enumDecode(_$GooglePayCardTokenStatusEnumMap, json['status']),
-      cardLastFour: json['cardLastFour'] as String,
-    );
+_$GooglePayCardTokenImpl _$$GooglePayCardTokenImplFromJson(
+  Map<String, dynamic> json,
+) => _$GooglePayCardTokenImpl(
+  id: json['id'] as String,
+  fpanLastFour: json['fpanLastFour'] as String,
+  dpanLastFour: json['dpanLastFour'] as String,
+  network: (json['network'] as num).toInt(),
+  serviceProvider: (json['serviceProvider'] as num).toInt(),
+  issuer: json['issuer'] as String,
+  status: $enumDecode(_$GooglePayCardTokenStatusEnumMap, json['status']),
+  cardLastFour: json['cardLastFour'] as String,
+);
 
-Map<String, dynamic> _$GooglePayCardTokenToJson(_GooglePayCardToken instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'fpanLastFour': instance.fpanLastFour,
-      'dpanLastFour': instance.dpanLastFour,
-      'network': instance.network,
-      'serviceProvider': instance.serviceProvider,
-      'issuer': instance.issuer,
-      'status': _$GooglePayCardTokenStatusEnumMap[instance.status]!,
-      'cardLastFour': instance.cardLastFour,
-    };
+Map<String, dynamic> _$$GooglePayCardTokenImplToJson(
+  _$GooglePayCardTokenImpl instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'fpanLastFour': instance.fpanLastFour,
+  'dpanLastFour': instance.dpanLastFour,
+  'network': instance.network,
+  'serviceProvider': instance.serviceProvider,
+  'issuer': instance.issuer,
+  'status': _$GooglePayCardTokenStatusEnumMap[instance.status]!,
+  'cardLastFour': instance.cardLastFour,
+};
 
 const _$GooglePayCardTokenStatusEnumMap = {
   GooglePayCardTokenStatus.TOKEN_STATE_NEEDS_IDENTITY_VERIFICATION:
@@ -41,51 +43,57 @@ const _$GooglePayCardTokenStatusEnumMap = {
   GooglePayCardTokenStatus.TOKEN_STATE_UNTOKENIZED: 'TOKEN_STATE_UNTOKENIZED',
 };
 
-_IsCardInWalletResult _$IsCardInWalletResultFromJson(
+_$IsCardInWalletResultImpl _$$IsCardInWalletResultImplFromJson(
   Map<String, dynamic> json,
-) => _IsCardInWalletResult(
+) => _$IsCardInWalletResultImpl(
   isInWallet: json['isInWallet'] as bool,
-  token: json['token'] == null
-      ? null
-      : GooglePayCardToken.fromJson(json['token'] as Map<String, dynamic>),
+  token:
+      json['token'] == null
+          ? null
+          : GooglePayCardToken.fromJson(json['token'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$IsCardInWalletResultToJson(
-  _IsCardInWalletResult instance,
+Map<String, dynamic> _$$IsCardInWalletResultImplToJson(
+  _$IsCardInWalletResultImpl instance,
 ) => <String, dynamic>{
   'isInWallet': instance.isInWallet,
   'token': instance.token?.toJson(),
 };
 
-_CanAddCardToWalletResult _$CanAddCardToWalletResultFromJson(
+_$CanAddCardToWalletResultImpl _$$CanAddCardToWalletResultImplFromJson(
   Map<String, dynamic> json,
-) => _CanAddCardToWalletResult(
+) => _$CanAddCardToWalletResultImpl(
   canAddCard: json['canAddCard'] as bool,
-  details: json['details'] == null
-      ? null
-      : CanAddCardToDetails.fromJson(json['details'] as Map<String, dynamic>),
+  details:
+      json['details'] == null
+          ? null
+          : CanAddCardToDetails.fromJson(
+            json['details'] as Map<String, dynamic>,
+          ),
 );
 
-Map<String, dynamic> _$CanAddCardToWalletResultToJson(
-  _CanAddCardToWalletResult instance,
+Map<String, dynamic> _$$CanAddCardToWalletResultImplToJson(
+  _$CanAddCardToWalletResultImpl instance,
 ) => <String, dynamic>{
   'canAddCard': instance.canAddCard,
   'details': instance.details?.toJson(),
 };
 
-_CanAddCardToDetails _$CanAddCardToDetailsFromJson(Map<String, dynamic> json) =>
-    _CanAddCardToDetails(
-      token: json['token'] == null
+_$CanAddCardToDetailsImpl _$$CanAddCardToDetailsImplFromJson(
+  Map<String, dynamic> json,
+) => _$CanAddCardToDetailsImpl(
+  token:
+      json['token'] == null
           ? null
           : GooglePayCardToken.fromJson(json['token'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(
-        _$CanAddCardToWalletStatusEnumMap,
-        json['status'],
-      ),
-    );
+  status: $enumDecodeNullable(
+    _$CanAddCardToWalletStatusEnumMap,
+    json['status'],
+  ),
+);
 
-Map<String, dynamic> _$CanAddCardToDetailsToJson(
-  _CanAddCardToDetails instance,
+Map<String, dynamic> _$$CanAddCardToDetailsImplToJson(
+  _$CanAddCardToDetailsImpl instance,
 ) => <String, dynamic>{
   'token': instance.token?.toJson(),
   'status': _$CanAddCardToWalletStatusEnumMap[instance.status],
@@ -101,9 +109,9 @@ const _$CanAddCardToWalletStatusEnumMap = {
       'CARD_EXISTS_ON_PAIRED_DEVICE',
 };
 
-_CanAddCardToWalletParams _$CanAddCardToWalletParamsFromJson(
+_$CanAddCardToWalletParamsImpl _$$CanAddCardToWalletParamsImplFromJson(
   Map<String, dynamic> json,
-) => _CanAddCardToWalletParams(
+) => _$CanAddCardToWalletParamsImpl(
   primaryAccountIdentifier: json['primaryAccountIdentifier'] as String?,
   cardLastFour: json['cardLastFour'] as String,
   testEnv: json['testEnv'] as bool?,
@@ -111,8 +119,8 @@ _CanAddCardToWalletParams _$CanAddCardToWalletParamsFromJson(
   supportsTapToPay: json['supportsTapToPay'] as bool?,
 );
 
-Map<String, dynamic> _$CanAddCardToWalletParamsToJson(
-  _CanAddCardToWalletParams instance,
+Map<String, dynamic> _$$CanAddCardToWalletParamsImplToJson(
+  _$CanAddCardToWalletParamsImpl instance,
 ) => <String, dynamic>{
   'primaryAccountIdentifier': instance.primaryAccountIdentifier,
   'cardLastFour': instance.cardLastFour,

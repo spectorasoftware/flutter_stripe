@@ -6,20 +6,22 @@ part of 'wallet.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_AddToWalletDetails _$AddToWalletDetailsFromJson(Map<String, dynamic> json) =>
-    _AddToWalletDetails(
-      status: $enumDecodeNullable(
-        _$CanAddToWalletErrorStatusEnumMap,
-        json['status'],
-      ),
-      token: json['token'] as String?,
-    );
+_$AddToWalletDetailsImpl _$$AddToWalletDetailsImplFromJson(
+  Map<String, dynamic> json,
+) => _$AddToWalletDetailsImpl(
+  status: $enumDecodeNullable(
+    _$CanAddToWalletErrorStatusEnumMap,
+    json['status'],
+  ),
+  token: json['token'] as String?,
+);
 
-Map<String, dynamic> _$AddToWalletDetailsToJson(_AddToWalletDetails instance) =>
-    <String, dynamic>{
-      'status': _$CanAddToWalletErrorStatusEnumMap[instance.status],
-      'token': instance.token,
-    };
+Map<String, dynamic> _$$AddToWalletDetailsImplToJson(
+  _$AddToWalletDetailsImpl instance,
+) => <String, dynamic>{
+  'status': _$CanAddToWalletErrorStatusEnumMap[instance.status],
+  'token': instance.token,
+};
 
 const _$CanAddToWalletErrorStatusEnumMap = {
   CanAddToWalletErrorStatus.UNSUPPORTED_DEVICE: 'UNSUPPORTED_DEVICE',
