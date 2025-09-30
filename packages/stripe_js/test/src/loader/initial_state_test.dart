@@ -1,5 +1,6 @@
 // ignore_for_file: library_annotations
 
+// ignore: deprecated_member_use
 @TestOn('browser')
 @Tags(["browser"])
 import 'dart:js';
