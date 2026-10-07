@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 4
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
       - name: root readme matches stripe readme
         run: |
           sh ./.github/workflows/scripts/compare-readme.sh
