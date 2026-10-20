@@ -24,10 +24,10 @@ jobs:
 
     steps:
       - name: 📚 Git Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
 
       - name: 🎯 Setup Dart
-        uses: dart-lang/setup-dart@v1
+        uses: dart-lang/setup-dart@6afc89df92d6eb3834022f73cd65adc8cdfcb92d # v1.8.1
 
       - name: 📦 Install Dependencies
         run: dart pub get
@@ -51,7 +51,7 @@ jobs:
           dart test -j 4 --coverage=coverage --platform=chrome && dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
       
       - name: 📊 Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v2
+        uses: VeryGoodOpenSource/very_good_coverage@3b475421464c564c0714d92ce02742bd81fa9eda # v2.2.0
         with:
           path: packages/stripe_js/coverage/lcov.info
           exclude: "lib/**/*.g.dart lib/**/*.freezed.dart"
